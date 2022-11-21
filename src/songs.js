@@ -1,18 +1,23 @@
+const songs = require("./data");
+
 //Exercise 1: Get the array of all Artists.
 function getAllArtists(array){
-    let result = '???';
-    //console.log("Exercise 1 ->", result);
+    let result = array.map((artista)=> artista.artist);
+    console.log("Exercise 1 ->", result);
     return result;
 };
 
 //Exercise 2: Get the songs of a certain artist
 function getSongsFromArtist(array, artist){
-    //Write your code here
+    let result = array.filter((song)=> song.artist == artist);
+    return result;
 };
 
 //Exercise 3: Alphabetic order by title
-function orderAlphabetically(){
-    //Write your code here
+function orderAlphabetically(array){
+    let result = array.map((titulo)=>`${titulo.title}`);
+    result.sort();
+    return result;
 };
 
 //Exercise 4: Order by year, ascending
