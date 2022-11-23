@@ -17,12 +17,15 @@ function getSongsFromArtist(array, artist){
 function orderAlphabetically(array){
     let result = array.map((titulo)=>`${titulo.title}`);
     result.sort();
-    return result;
+    let finalResult= result.slice (0,10);
+    return finalResult;
 };
 
 //Exercise 4: Order by year, ascending
-function orderByYear(){
-    //Write your code here
+function orderByYear(array){
+    let newArray = array.map((x) => x);
+    newArray.sort((a,b)=>a-b);
+    return newArray;
 };
 
 //Exercise 5: Filter songs by genre
